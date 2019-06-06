@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://kongxiangyan.github.io/Markdown/</id>
+    <id>https://kongxiangyan.github.io/</id>
     <title>Thoughts</title>
-    <updated>2019-06-06T08:23:58.932Z</updated>
+    <updated>2019-06-06T08:24:25.175Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://kongxiangyan.github.io/Markdown/"/>
-    <link rel="self" href="https://kongxiangyan.github.io/Markdown//atom.xml"/>
+    <link rel="alternate" href="https://kongxiangyan.github.io/"/>
+    <link rel="self" href="https://kongxiangyan.github.io//atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://kongxiangyan.github.io/Markdown//images/avatar.png</logo>
-    <icon>https://kongxiangyan.github.io/Markdown//favicon.ico</icon>
+    <logo>https://kongxiangyan.github.io//images/avatar.png</logo>
+    <icon>https://kongxiangyan.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Thoughts</rights>
     <entry>
         <title type="html"><![CDATA[Markdown Cheatsheet]]></title>
-        <id>https://kongxiangyan.github.io/Markdown//post/markdown-cheatsheet</id>
-        <link href="https://kongxiangyan.github.io/Markdown//post/markdown-cheatsheet">
+        <id>https://kongxiangyan.github.io//post/markdown-cheatsheet</id>
+        <link href="https://kongxiangyan.github.io//post/markdown-cheatsheet">
         </link>
         <updated>2019-06-02T08:12:23.000Z</updated>
         <content type="html"><![CDATA[<h1 id="markdown-cheatsheet">Markdown Cheatsheet</h1>
@@ -95,8 +95,8 @@
 </ol>
 <h3 id="任务列表">任务列表</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8444144"><label class="task-list-item-label" for="task-item-8444144"> 未完成的任务项</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2070369"><label class="task-list-item-label" for="task-item-2070369"> 已完成的任务项</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7632996"><label class="task-list-item-label" for="task-item-7632996"> 未完成的任务项</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2023635"><label class="task-list-item-label" for="task-item-2023635"> 已完成的任务项</label></li>
 </ul>
 <pre><code>- [ ] 未完成的任务项
 - [x] 已完成的任务项
@@ -198,8 +198,8 @@ Content Cell  | Content Cell  | Content Cell
     </entry>
     <entry>
         <title type="html"><![CDATA[Markdown 为何物]]></title>
-        <id>https://kongxiangyan.github.io/Markdown//post/what-is-markdown</id>
-        <link href="https://kongxiangyan.github.io/Markdown//post/what-is-markdown">
+        <id>https://kongxiangyan.github.io//post/what-is-markdown</id>
+        <link href="https://kongxiangyan.github.io//post/what-is-markdown">
         </link>
         <updated>2019-06-01T13:06:38.000Z</updated>
         <content type="html"><![CDATA[<h1 id="markdown-为何物">Markdown 为何物</h1>
@@ -349,8 +349,8 @@ color: red;
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://kongxiangyan.github.io/Markdown//post/hello-gridea</id>
-        <link href="https://kongxiangyan.github.io/Markdown//post/hello-gridea">
+        <id>https://kongxiangyan.github.io//post/hello-gridea</id>
+        <link href="https://kongxiangyan.github.io//post/hello-gridea">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
