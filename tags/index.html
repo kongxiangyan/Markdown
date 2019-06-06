@@ -1,103 +1,184 @@
+<!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Thoughts</title>
-<link rel="shortcut icon" href="https://kongxiangyan.github.io/Markdown/favicon.ico?v=1559838649375">
+    <meta charset="utf-8" >
+
+<title>标签列表 | Thoughts</title>
+<meta name="description" content="生活很美好，值得我们为之奋斗！">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://kongxiangyan.github.io/Markdown/favicon.ico?v=1559839543669">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
 <link rel="stylesheet" href="https://kongxiangyan.github.io/Markdown/styles/main.css">
 
+
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://kongxiangyan.github.io/Markdown">
-  <img class="avatar" src="https://kongxiangyan.github.io/Markdown/images/avatar.png?v=1559838649375" alt="">
-  </a>
-  <h1 class="site-title">
-    Thoughts
-  </h1>
-  <p class="site-description">
-    生活很美好，值得我们为之奋斗！
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="https://kongxiangyan.github.io/Markdown" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="https://kongxiangyan.github.io/Markdown/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="https://kongxiangyan.github.io/Markdown/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="https://kongxiangyan.github.io/Markdown/post/about/" class="menu">
-          关于
-        </a>
-      
-    
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://kongxiangyan.github.io/Markdown">Thoughts</a></h3>
   </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/kongxiangyan" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-    
-      
-        <a href="https://weibo.com/u/6359815754" target="_blank">
-          <i class="fab fa-weibo"></i>
-        </a>
-      
-    
-      
-        <a href="https://www.zhihu.com/people/kong-xiang-yan-9/" target="_blank">
-          <i class="fab fa-zhihu"></i>
-        </a>
-      
-    
-      
-    
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="https://kongxiangyan.github.io/Markdown" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="https://kongxiangyan.github.io/Markdown/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="https://kongxiangyan.github.io/Markdown/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="https://kongxiangyan.github.io/Markdown/post/about/" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
   </div>
-</div>
+</nav>
 
-
-        <div class="tags-container">
-          
-            <a class="tag" href="https://kongxiangyan.github.io/Markdown/tag/blog">blog</a>
-          
-            <a class="tag" href="https://kongxiangyan.github.io/Markdown/tag/markdown">markdown</a>
-          
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <h2 class="tag-list-title">标签列表</h2>
+          <div class="row tags-container">
+            
+              <a href="https://kongxiangyan.github.io/Markdown/tag/blog" class="badge success">
+                blog
+              </a>
+            
+              <a href="https://kongxiangyan.github.io/Markdown/tag/markdown" class="badge warning">
+                markdown
+              </a>
+            
+          </div>
         </div>
-
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+      </div>
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://kongxiangyan.github.io/Markdown/images/avatar.png?v=1559839543669" class="no-responsive avatar">
+    <div class="text-muted">生活很美好，值得我们为之奋斗！</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://kongxiangyan.github.io/Markdown/post/blog-base-on-markdown">基于 Markdown 搭建博客</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://kongxiangyan.github.io/Markdown/post/special-symbol">Special Symbol</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://kongxiangyan.github.io/Markdown/post/markdown-cheatsheet">Markdown Cheatsheet</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://kongxiangyan.github.io/Markdown/post/what-is-markdown">Markdown 为何物</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://kongxiangyan.github.io/Markdown/tag/blog" class="badge secondary">
+          blog
+        </a>
+      
+        <a href="https://kongxiangyan.github.io/Markdown/tag/markdown" class="badge ">
+          markdown
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  </div>
 </div>
+  
+    </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
 </script>
 
-      </div>
-    </div>
+
+
+
   </body>
 </html>
