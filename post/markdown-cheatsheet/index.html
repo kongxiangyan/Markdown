@@ -1,0 +1,292 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Markdown Cheatsheet | Thoughts</title>
+<link rel="shortcut icon" href="D:/OneDrive/Storage/SoftwareAttachment/Gridea/output/favicon.ico?v=1559531029583">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="D:/OneDrive/Storage/SoftwareAttachment/Gridea/output/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="D:/OneDrive/Storage/SoftwareAttachment/Gridea/output">
+  <img class="avatar" src="D:/OneDrive/Storage/SoftwareAttachment/Gridea/output/images/avatar.png?v=1559531029583" alt="">
+  </a>
+  <h1 class="site-title">
+    Thoughts
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="D:/OneDrive/Storage/SoftwareAttachment/Gridea/output//index.html" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="D:/OneDrive/Storage/SoftwareAttachment/Gridea/output/archives/index.html" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="D:/OneDrive/Storage/SoftwareAttachment/Gridea/output/tags/index.html" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="D:/OneDrive/Storage/SoftwareAttachment/Gridea/output/post/about/index.html" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+      
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Markdown Cheatsheet
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-06-02 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <h1 id="markdown-cheatsheet">Markdown Cheatsheet</h1>
+<hr>
+<h2 id="标题">标题</h2>
+<p>一般使用  n ( n ≤ 6 )  个 <code>#</code> + <kbd>Space</kbd>  + <code>标题内容</code> 创建 N 级标题，或者使用 n 个 <code>#</code> + <kbd>Space</kbd>  + <code>标题内容</code> + <kbd>Space</kbd>  + n 个 <code>#</code>。</p>
+<pre><code class="language-markdown"># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+</code></pre>
+<h2 id="文字样式">文字样式</h2>
+<ul>
+<li>斜体 ： <em>斜体文字</em> or <em>斜体文字</em></li>
+<li>加粗 ： <strong>加粗文字</strong> or <strong>加粗文字</strong></li>
+<li>加粗斜体 ： <em><strong>加粗斜体文字</strong></em> or <em><strong>加粗斜体文字</strong></em></li>
+<li>删除线 ： <s>删除文字</s></li>
+<li>行内代码块 : <code>行内代码块</code></li>
+<li>键位标识 ： <kbd>键位名称</kbd></li>
+<li>Emoji ： :Emoji Code: ，比如 :yum:
+<ul>
+<li>Emoji Code 可以参见 → <a href="http://emoji-cheat-sheet.com">emoji-cheat-sheet</a></li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-markdown">- 斜体 ： _斜体文字_ or *斜体文字*
+- 加粗 ： __加粗文字__ or **加粗文字** 
+- 加粗斜体 ： ___加粗斜体文字___ or ***加粗斜体文字***
+- 删除线 ： ~~删除文字~~
+- 行内代码块 : `行内代码块`
+- 键位标识 ： &lt;kbd&gt;键位名称&lt;/kbd&gt;
+- Emoji ： :EMOJICODE:，比如:yum:
+	- Emoji Code 可以参见 → [emoji-cheat-sheet](http://emoji-cheat-sheet.com)
+</code></pre>
+<h2 id="文字链接">文字链接</h2>
+<pre><code class="language-markdown">- 一般链接 ： 
+	- [带链接的文字内容](链接地址 &quot;链接提示文本&quot;) 
+	- 链接地址
+	- &lt;链接地址&gt;
+- 本文链接：
+	- [带链接的文字内容](#标题内容 &quot;链接提示文本&quot;)
+</code></pre>
+<h2 id="列表">列表</h2>
+<h3 id="无序列表">无序列表</h3>
+<ul>
+<li>
+<p>无序列表示例</p>
+</li>
+<li>
+<p>无序列表语法如下：</p>
+<pre><code class="language-markdown">* 无序列表项一
+* 无序列表项二
+	* 缩进的列表项一
+	* 缩进的列表项二
+		* 支持无限级别缩进
+	* 可以退回上一级
+</code></pre>
+</li>
+</ul>
+<h3 id="有序列表">有序列表</h3>
+<ol>
+<li>
+<p>有序列表示例</p>
+</li>
+<li>
+<p>有序列表语法如下：</p>
+<pre><code class="language-markdown">1. 有序列表项一
+2. 有序列表项二
+	* 可与无序列表穿插
+	* 无序列表穿插实例
+2. 标号可随便写，会自动纠正
+	1. 再次缩进
+		1. 继续缩进
+	2. 返回上一级
+</code></pre>
+</li>
+</ol>
+<h3 id="任务列表">任务列表</h3>
+<ul>
+<li>[ ] 未完成的任务项</li>
+<li>[x] 已完成的任务项</li>
+</ul>
+<pre><code>- [ ] 未完成的任务项
+- [x] 已完成的任务项
+	- 可以与其它列表穿插
+		- [ ] 穿插的未完成任务项
+</code></pre>
+<h2 id="表格">表格</h2>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th style="text-align:center">Second Header</th>
+<th style="text-align:right">Third Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:right">Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:right">Content Cell</td>
+</tr>
+</tbody>
+</table>
+<pre><code>First Header  | Second Header | Third Header
+------------- | :-----------: | -----------:
+Content Cell  | Content Cell  | Content Cell
+Content Cell  | Content Cell  | Content Cell
+</code></pre>
+<h2 id="代码段">代码段</h2>
+<p>使用 <code>```</code> + <code>语言名称</code> + <kbd>Enter</kbd> + <code>代码片段</code> + <kbd>Enter</kbd> + <code>```</code> ，添加代码片段并根据指定的语言进行高亮。</p>
+<h2 id="引用">引用</h2>
+<p>使用 <code>&gt;</code> +  <kbd>Space</kbd> +  <code>引用文本</code> 创建引用样式，引用支持无限缩进。</p>
+<blockquote>
+<p>引用内容</p>
+<blockquote>
+<p>缩进的引用内容</p>
+</blockquote>
+<blockquote>
+<p>缩进的引用内容</p>
+<blockquote>
+<p>双重缩进的引用内容</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>另一个双重缩进的引用内容</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre><code class="language-markdown">&gt; 引用内容
+&gt;
+&gt; &gt; 缩进的引用内容
+&gt;
+&gt; &gt; 缩进的引用内容
+&gt; &gt;
+&gt; &gt; &gt; 双重缩进的引用内容
+&gt;
+&gt; &gt; &gt; 另一个双重缩进的引用内容
+</code></pre>
+<h2 id="分隔线">分隔线</h2>
+<p>使用 3 个以上的 <code>-</code> 来创建分隔线。</p>
+<hr>
+<pre><code class="language-markdown">---
+</code></pre>
+<h2 id="图片">图片</h2>
+<p><img src="https://oss.thoughts.vip/image/note/20190602160952.png%22%E7%BA%B3%E7%B1%B3%E6%AF%94%E4%BA%9A%E7%9A%84%E5%B0%8F%E5%B1%8B%22" alt="纳米比亚的小屋"></p>
+<pre><code class="language-markdown">![图片的占位文本，图片加载失败的时候显示](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg &quot;可选的图片标题，鼠标悬浮的时候显示&quot;)
+</code></pre>
+<h2 id="折叠文本">折叠文本</h2>
+<details>
+	<summary>折叠文本示例</summary>
+  <h3>
+    折叠部分的三级标题
+  </h3>
+  <p>可以被藏起来的无样式内容。</p>
+  <p style="color: #419d78;">
+    折叠部分内容可以随意添加样式，比如这段文本添加了颜色。
+  </p>
+</details>
+<pre><code>&lt;details&gt;
+	&lt;summary&gt;折叠部分的标题&lt;/summary&gt;
+  &lt;h3&gt;
+    折叠部分可以添加任意 Html 内容，包括但不限于标题
+  &lt;/h3&gt;
+  &lt;p&gt;可以被藏起来的无样式内容。&lt;/p&gt;
+  &lt;p style=&quot;color: #419d78;&quot;&gt;
+    折叠部分内容可以随意添加样式，比如这段文本添加了颜色。
+  &lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+<h2 id="其它">其它</h2>
+<p>以上都是常用的标记语法啦，足够满足99%的一般写作需求，其它抽空再补充 :tada:</p>
+
+            </div>
+          </article>
+        </div>
+    
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="D:/OneDrive/Storage/SoftwareAttachment/Gridea/output/post/what-is-markdown/index.html">
+              <h3 class="post-title">
+                Markdown 为何物
+              </h3>
+            </a>
+          </div>  
+        
+
+        
+    
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

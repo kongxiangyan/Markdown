@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>C:/Users/cigaret/OneDrive/Storage/SoftwareAttachment/Gridea/output</id>
+    <title>Thoughts</title>
+    <updated>2019-06-02T08:21:55.894Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="C:/Users/cigaret/OneDrive/Storage/SoftwareAttachment/Gridea/output"/>
+    <link rel="self" href="C:/Users/cigaret/OneDrive/Storage/SoftwareAttachment/Gridea/output/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>C:/Users/cigaret/OneDrive/Storage/SoftwareAttachment/Gridea/output/images/avatar.png</logo>
+    <icon>C:/Users/cigaret/OneDrive/Storage/SoftwareAttachment/Gridea/output/favicon.ico</icon>
+    <rights>All rights reserved 2019, Thoughts</rights>
+    <entry>
+        <title type="html"><![CDATA[Markdown Cheatsheet]]></title>
+        <id>C:/Users/cigaret/OneDrive/Storage/SoftwareAttachment/Gridea/output/post/markdown-cheatsheet/index.html</id>
+        <link href="C:/Users/cigaret/OneDrive/Storage/SoftwareAttachment/Gridea/output/post/markdown-cheatsheet/index.html">
+        </link>
+        <updated>2019-06-02T08:12:23.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="markdown-cheatsheet">Markdown Cheatsheet</h1>
+<hr>
+<h2 id="标题">标题</h2>
+<p>一般使用  n ( n ≤ 6 )  个 <code>#</code> + <kbd>Space</kbd>  + <code>标题内容</code> 创建 N 级标题，或者使用 n 个 <code>#</code> + <kbd>Space</kbd>  + <code>标题内容</code> + <kbd>Space</kbd>  + n 个 <code>#</code>。</p>
+<pre><code class="language-markdown"># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+</code></pre>
+<h2 id="文字样式">文字样式</h2>
+<ul>
+<li>斜体 ： <em>斜体文字</em> or <em>斜体文字</em></li>
+<li>加粗 ： <strong>加粗文字</strong> or <strong>加粗文字</strong></li>
+<li>加粗斜体 ： <em><strong>加粗斜体文字</strong></em> or <em><strong>加粗斜体文字</strong></em></li>
+<li>删除线 ： <s>删除文字</s></li>
+<li>行内代码块 : <code>行内代码块</code></li>
+<li>键位标识 ： <kbd>键位名称</kbd></li>
+<li>Emoji ： :Emoji Code: ，比如 :yum:
+<ul>
+<li>Emoji Code 可以参见 → <a href="http://emoji-cheat-sheet.com">emoji-cheat-sheet</a></li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-markdown">- 斜体 ： _斜体文字_ or *斜体文字*
+- 加粗 ： __加粗文字__ or **加粗文字** 
+- 加粗斜体 ： ___加粗斜体文字___ or ***加粗斜体文字***
+- 删除线 ： ~~删除文字~~
+- 行内代码块 : `行内代码块`
+- 键位标识 ： &lt;kbd&gt;键位名称&lt;/kbd&gt;
+- Emoji ： :EMOJICODE:，比如:yum:
+	- Emoji Code 可以参见 → [emoji-cheat-sheet](http://emoji-cheat-sheet.com)
+</code></pre>
+<h2 id="文字链接">文字链接</h2>
+<pre><code class="language-markdown">- 一般链接 ： 
+	- [带链接的文字内容](链接地址 &quot;链接提示文本&quot;) 
+	- 链接地址
+	- &lt;链接地址&gt;
+- 本文链接：
+	- [带链接的文字内容](#标题内容 &quot;链接提示文本&quot;)
+</code></pre>
+<h2 id="列表">列表</h2>
+<h3 id="无序列表">无序列表</h3>
+<ul>
+<li>
+<p>无序列表示例</p>
+</li>
+<li>
+<p>无序列表语法如下：</p>
+<pre><code class="language-markdown">* 无序列表项一
+* 无序列表项二
+	* 缩进的列表项一
+	* 缩进的列表项二
+		* 支持无限级别缩进
+	* 可以退回上一级
+</code></pre>
+</li>
+</ul>
+<h3 id="有序列表">有序列表</h3>
+<ol>
+<li>
+<p>有序列表示例</p>
+</li>
+<li>
+<p>有序列表语法如下：</p>
+<pre><code class="language-markdown">1. 有序列表项一
+2. 有序列表项二
+	* 可与无序列表穿插
+	* 无序列表穿插实例
+2. 标号可随便写，会自动纠正
+	1. 再次缩进
+		1. 继续缩进
+	2. 返回上一级
+</code></pre>
+</li>
+</ol>
+<h3 id="任务列表">任务列表</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1297505"><label class="task-list-item-label" for="task-item-1297505"> 未完成的任务项</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2031251"><label class="task-list-item-label" for="task-item-2031251"> 已完成的任务项</label></li>
+</ul>
+<pre><code>- [ ] 未完成的任务项
+- [x] 已完成的任务项
+	- 可以与其它列表穿插
+		- [ ] 穿插的未完成任务项
+</code></pre>
+<h2 id="表格">表格</h2>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th style="text-align:center">Second Header</th>
+<th style="text-align:right">Third Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:right">Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td style="text-align:center">Content Cell</td>
+<td style="text-align:right">Content Cell</td>
+</tr>
+</tbody>
+</table>
+<pre><code>First Header  | Second Header | Third Header
+------------- | :-----------: | -----------:
+Content Cell  | Content Cell  | Content Cell
+Content Cell  | Content Cell  | Content Cell
+</code></pre>
+<h2 id="代码段">代码段</h2>
+<p>使用 <code>```</code> + <code>语言名称</code> + <kbd>Enter</kbd> + <code>代码片段</code> + <kbd>Enter</kbd> + <code>```</code> ，添加代码片段并根据指定的语言进行高亮。</p>
+<h2 id="引用">引用</h2>
+<p>使用 <code>&gt;</code> +  <kbd>Space</kbd> +  <code>引用文本</code> 创建引用样式，引用支持无限缩进。</p>
+<blockquote>
+<p>引用内容</p>
+<blockquote>
+<p>缩进的引用内容</p>
+</blockquote>
+<blockquote>
+<p>缩进的引用内容</p>
+<blockquote>
+<p>双重缩进的引用内容</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>另一个双重缩进的引用内容</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre><code class="language-markdown">&gt; 引用内容
+&gt;
+&gt; &gt; 缩进的引用内容
+&gt;
+&gt; &gt; 缩进的引用内容
+&gt; &gt;
+&gt; &gt; &gt; 双重缩进的引用内容
+&gt;
+&gt; &gt; &gt; 另一个双重缩进的引用内容
+</code></pre>
+<h2 id="分隔线">分隔线</h2>
+<p>使用 3 个以上的 <code>-</code> 来创建分隔线。</p>
+<hr>
+<pre><code class="language-markdown">---
+</code></pre>
+<h2 id="图片">图片</h2>
+<p><img src="https://oss.thoughts.vip/image/note/20190602160952.png%22%E7%BA%B3%E7%B1%B3%E6%AF%94%E4%BA%9A%E7%9A%84%E5%B0%8F%E5%B1%8B%22" alt="纳米比亚的小屋"></p>
+<pre><code class="language-markdown">![图片的占位文本，图片加载失败的时候显示](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg &quot;可选的图片标题，鼠标悬浮的时候显示&quot;)
+</code></pre>
+<h2 id="折叠文本">折叠文本</h2>
+<details>
+	<summary>折叠文本示例</summary>
+  <h3>
+    折叠部分的三级标题
+  </h3>
+  <p>可以被藏起来的无样式内容。</p>
+  <p style="color: #419d78;">
+    折叠部分内容可以随意添加样式，比如这段文本添加了颜色。
+  </p>
+</details>
+<pre><code>&lt;details&gt;
+	&lt;summary&gt;折叠部分的标题&lt;/summary&gt;
+  &lt;h3&gt;
+    折叠部分可以添加任意 Html 内容，包括但不限于标题
+  &lt;/h3&gt;
+  &lt;p&gt;可以被藏起来的无样式内容。&lt;/p&gt;
+  &lt;p style=&quot;color: #419d78;&quot;&gt;
+    折叠部分内容可以随意添加样式，比如这段文本添加了颜色。
+  &lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+<h2 id="其它">其它</h2>
+<p>以上都是常用的标记语法啦，足够满足99%的一般写作需求，其它抽空再补充 :tada:</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Markdown 为何物]]></title>
+        <id>C:/Users/cigaret/OneDrive/Storage/SoftwareAttachment/Gridea/output/post/what-is-markdown/index.html</id>
+        <link href="C:/Users/cigaret/OneDrive/Storage/SoftwareAttachment/Gridea/output/post/what-is-markdown/index.html">
+        </link>
+        <updated>2019-06-01T13:06:38.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="markdown-为何物">Markdown 为何物</h1>
+<blockquote>
+<p>工具即思维。</p>
+</blockquote>
+<p><code>mark down</code>，顾名思义，跟写作有关。事实上，它为我们提供了一种<strong>轻量的写作方案</strong>，有效提升我们的写作体验的同时亦能大幅优化写作生态。👍</p>
+<p>许多不明就里的人会将 Markdown 视为一种编辑器，就像记事本和 Word 一样，这种认识并不准确。<code>Markdown</code>  和 <code>Markdown编辑器</code> 是两个完全不同的概念，前者的本质的是一种 <code>标记语法</code>，后者是为这种标记语法提供特殊支持的编辑器。</p>
+<details>
+           <summary>Title 1</summary>
+           <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+         </details>
+<h2 id="标记语法">标记语法</h2>
+<p>Markdown 文本长这个样子：</p>
+<pre><code class="language-markdown"># Markdown 为何物
+&gt; 工具即思维。
+`mark down`，顾名思义，跟写作有关。事实上，它为我们提供了一种**轻量**的写作方案，有效提升我们的写作体验的同时亦能大幅优化写作生态。👍
+</code></pre>
+<p>以上内容跟文章开头完全对应，二者相比较，能得到非常直观的感受：</p>
+<ul>
+<li>文章开头部分具有美观的样式（最起码不丑吧😛）；</li>
+<li>与之对应的 Markdown 是没有任何样式的纯文本，其中附带了一些额外的符号；</li>
+</ul>
+<p>正是这些额外的符号，让文章开头的文本具备了样式，换句话说，我们<strong>通过在文本中插入符号来让它拥有样式</strong>。</p>
+<h3 id="html">Html</h3>
+<p>这种通过特殊标记向文本中添加额外信息的方式叫做 <code>标记语法</code> ，如果你接触过 <code>Html</code> 的话，你会对这个概念有明确的理解，<code>Html</code> 是一种典型的标记语言，它被标准化并用于创建网页。文章开头的内容跟上文展示的 Markdown 对应的 Html 长下面这个样子：</p>
+<pre><code class="language-html">&lt;h1&gt;
+  Markdown 为何物
+&lt;/h1&gt;
+&lt;blockquote&gt;
+  工具即思维。
+&lt;/blockquote&gt;
+&lt;p&gt;
+  &lt;code&gt;mark down&lt;/code&gt;，顾名思义，跟写作有关。事实上，它为我们提供了一种&lt;strong&gt;轻量的写作方案&lt;/strong&gt;，有效提升我们的写作体验的同时亦能大幅优化写作生态。👍
+&lt;/p&gt;
+</code></pre>
+<p><code>Html</code> 一般使用成对的标签来标记内容，前后标签分别使用 <code>&lt; &gt;</code> 和 <code>&lt;/ &gt;</code> 来包裹，就像这样：<code>&lt;标签名&gt;&lt;/标签名&gt;</code> ，被标记的内容写在标签对的内部，就像这样：<code>&lt;标签名&gt;这里是被标记的内容&lt;/标签名&gt;</code>，标签对及其内容称为一个 <code>元素</code>，元素可以包含其它元素。Html 标签之间互不交叉、层层嵌套，我们便可以完全基于纯文本[^1]将任意内容组织成<strong>树状结构</strong>。同时，Html 语言的标签是<strong>语义化</strong>的，以上面的内容为例，标签名 <code>h1</code> 表示一级标题、 <code>blockquote</code> 表示块引用、<code>p</code> 表示段落、<code>code</code> 表示代码字段、<code>strong</code> （或 <code>b</code>）表示加粗，对应的含义非常明确，分别是 header 1、quote、paragraph、code、strong(bold)，显然，使用 Html 组织的内容具有完全的可读性。当然， Html 规范中的标签远不止这些，借助丰富多样的标签，我们得以创建任何复杂程度的网页结构。以  Html 的结构化能力为基础，借助 <code>CSS</code> 的样式化能力和 <code>Javascript</code> 的交互能力，页面具有无限的可能性，最终构建起我们🌏上网冲浪看到的一切花花世界。</p>
+<blockquote>
+<p>纯文本：区别于富文本，指不含任何样式信息的文本。</p>
+</blockquote>
+<h3 id="markdown">Markdown</h3>
+<p>Markdown 的诞生正如同这花花世界的沧海一粟。 它被设计的目的是为网络作者们（指博客作者们）提供一种易于书写、易于阅读、易于发布的工具。网页作为最终的发布形式，其标记语言 Html 自然就作为了 Markdown 的基础。<a href="https://daringfireball.net/projects/markdown/">John Gruber</a> 提取 Html 标签中经常用于写文章的部分，对它们的语法进行了简化，也就是将 <code>语义化的尖括号包围的成对标签</code> 简化为 <code>特殊符号或特殊符号组合</code>，并实现了对应的 <code>Markdown → Html</code> 的转换器，这便是最初的 Markdown。还是以上面 Markdown 和 Html 的例子做比，不难发现：</p>
+<ul>
+<li>Markdown 中使用 <code>#</code> + <code>空格</code> + <code>内容</code>，替代 Html 中的 <code>&lt;h1&gt;内容&lt;/h1&gt;</code>；</li>
+<li>Markdown 中使用 <code>&gt;</code> + <code>空格</code> + <code>内容</code>，替代 Html 中的 <code>&lt;blockquote&gt;内容&lt;\blockquote&gt;</code>；</li>
+<li>Markdown 中使用 成对的  <code>` </code> ，替代 Html 中的  <code>&lt;code&gt;&lt;/code&gt;</code>；</li>
+<li>Markdown 中使用 成对的 <code>**</code> ，替代 Html 中的 <code>&lt;strong&gt;&lt;/strong&gt;</code>；</li>
+</ul>
+<p>在保留一定象形理解性的基础上，Markdown 大大简化了 Html 的标记方式，书写起来更加自然流畅。并且，它对于初学者极为友好，只需要简单熟悉一下标记规则即可上手写作，几乎不需要任何学习基础，也不需要任何高级的工具，毕竟一个 Markdown 文件（一般以 <code>md</code> 为后缀）也只是添加了特殊符号的纯文本而已，一切可以用来编辑文本的软件都可以用来书写它。</p>
+<blockquote>
+<p>需要说明的是，我们上面展示的 Markdown 标记规则，并不完全是 John Gruber 最初设计的规则。Markdown 的成功远远超出他的预期，15 年间，大家承接他的思路，优化并拓展了 Markdown 标记语法，制定了相应的规范 → CommonMark，开发者们基于规范做了各种各样的实现，或修改标记符号、或定制新的功能，然而其本质未变，核心的写作功能亦大同小异， Markdown 早就变得无处不在。如今最流行的 Markdown 语法规范，当属基于 CommonMark 的 GFM （Github Flavored Markdown）。</p>
+</blockquote>
+<h2 id="markdown-编辑器">Markdown 编辑器</h2>
+<p>Markdown 允许我们使用少量特殊的标记符号将额外的结构信息、样式信息写入到纯文本中，并在保持易于书写的特性的同时保证它的可读性。</p>
+<h3 id="markdown-解析器">Markdown 解析器</h3>
+<p>Markdown 在发布之后，读者接收到的是去除特殊符号之后、按照标记添加了特定样式的内容。在这个过程中起作用的是 <code>Markdown 解析器</code> 和 <code>CSS</code> ，Markdown 源自 Html，大多数时候也将<strong>基于 Html 对外发布</strong>， Markdown 解析器可以将 Markdown 文本转换为 Html 文本，转换的过程实际上就是标记符号的替换。解析器按照一定的转换规则，寻找 Markdown 文本中的标记并将其替换为 Html 标签，转换完成之后的内容就可以写入到网页中发布啦。</p>
+<p>事实上我们所说的 <strong>Markdown 包括两部分，一部分是其标记规范，另外一部分就是规范对应的解析器</strong>，来自 Html 也归于 Html 才称得上是完全的 Markdown，这也是其大火的原因之一。</p>
+<blockquote>
+<ul>
+<li>解析的过程非常非常非常短暂，CommonMark 规范的解析器可以在一眨眼的时间内解析完一整本 Markdown 版本的《战争与和平》，这是十年之前的数据！</li>
+<li>Markdown 和 Html 可以互相转换，Markdown 解析器可以将 Markdown 转换为 Html，同样也有解析器可以完成从 Html 到 Markdown 的转换（文章正文）；</li>
+<li>Markdown 基于 Html 并将转换为 Html ，故可以在 Markdown 中直接写入 Html 内容，解析器解析过程中会回避原始的 Html 标签，并在结果中做正确呈现，这个特性为 Markdown 内容提供了更大的丰富性；</li>
+<li>从技术角度说，转换的过程可以是任何时刻，包括但不限于在你写作的过程中、写作完成之后、存储的时候、发布的时候……取决于你想达成的效果。</li>
+</ul>
+</blockquote>
+<h3 id="内容样式解决方案">内容样式解决方案</h3>
+<p>Markdown 解析器转换出的 Html 是裸 Html ，只具有标签的默认样式，其简单程度甚至难以达到绝大多数人的审美底线，<code>CSS</code> （Cascading Style Sheets，层叠样式表）的作用就是为结构化文档定义美美哒、酷酷哒、或者炫炫哒或者其它什么哒的样式。而 Html 就是一种结构化文档，它通过互不交叉、层层嵌套的标签将页面内容组织成树状结构，支持我们以任意粒度定位页面的任何元素，然后通过 CSS 为其定义样式。CSS 也是强的一P，它可以定义<strong>一切</strong>你能想到的样式内容……思来想去，最能够让你有直观感受的描述是过往你所见过的没有见过的网页上大大小小的、花花绿绿的、黑黑白白的、蹦蹦跳跳的、闪闪烁烁的、乱起八糟的、花里胡哨的内容，除了<strong>文本含义</strong>以外（是的！字体也可以定义！）都是通过 CSS 实现的（严谨的地说是都可以通过 CSS 实现）。</p>
+<blockquote>
+<p>常用的通过 CSS 为 Html 添加样式的方式分为三种，一种是将样式直接添加到 Html 标签上，比如：</p>
+<pre><code class="language-html">&lt;h1 style=&quot;color: red;&quot;&gt;&lt;/h1&gt;
+</code></pre>
+<p>称为<strong>内联样式</strong>；一种是将页面中会用到的样式添加到页面的统一位置，比如添加到样式标签里面：</p>
+<pre><code class="language-html">&lt;style&gt;
+	h1{ 
+    color:red;
+  }
+&lt;/style&gt;
+</code></pre>
+<p>称为<strong>内部样式表</strong>；另外一种是将定义的 CSS 样式统一写在另外一个单独的文件里，这个文件就像下面这样：</p>
+<pre><code class="language-css">h1 {
+color: red;
+}
+</code></pre>
+<p>然后在 Html 中引入这个文件即可，像这样&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./path/to/css.css&quot;/&gt;，这种方式称为<strong>外部样式表</strong>。</p>
+</blockquote>
+<p>基于外部样式表我们可以实现<strong>内容与样式分离</strong>，这是什么概念呢，请看：</p>
+<pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;这是一个网页的大致结构&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./path/to/css.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  	&lt;!-- Markdown 转换之后的 Html 放在这里 --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>我们写的 Markdown 文本，最终展现给别人的丰富多彩的样子，是基于 Html + CSS 的，通过这种方案，我们可以单独定义自己的样式，并将其体现在自己的所有 Markdown 转换结果中，这也意味着你可以同时修改所有的样式，也可以定义多套样式换着用，随你怎么样（可以理解为“皮肤”）。谁来完成这样的工作呢，把 Markdown 转换为 Html ，然后嵌入到特定的 Html 页面结构中的特定位置，并引入指定的样式，最后将结果导出。</p>
+<blockquote>
+<ul>
+<li>基于以上网页的大致结构，我们还可以在页面上添加其它元素，例如导航栏、文章目录栏……回想一下网上的各种博客！！是的，完全可以基于 Markdown 搭建个人博客，网上已经有 N 种搭建方案供你选择。</li>
+<li>事实上，页面结构、页面样式、内容样式、文章内容，是多对多对多对多的关系，用 Markdown 写的文章具有无限可能性。</li>
+<li>上文中介绍的 GFM 除了一套标记规范外，还包括一份样式文件。</li>
+</ul>
+</blockquote>
+<h3 id="编辑器">编辑器</h3>
+<p>编辑器是普及 Markdown 的最大功臣，它大大降低了 Markdown 的进阶门槛，让以上描述的一切都变得无比美好。</p>
+<p>尽管 Markdown 文本具有良好的可读性，但对于大多数人来说，并不是很容易能够接收纯文本写作的方式，我们更希望能够随时看到样式化的结果。Markdown 编辑器的主要考虑即在于此，让习作体验更上一层楼。编辑器内置 Markdown 解析器，支持 Markdown → Html 的即时转换，主界面一般分为两栏，一栏是写作区域，用于书写 Markdown 文本，另外一栏是预览区域，即时展示样式化的结果，其背后的基本运行逻辑便是：<code>Markdown → Html → 写入特定页面结构 → 应用特定样式 → 输出到预览区域</code>，同时，在编辑方面，大多数编辑器还支持以下特性：</p>
+<ul>
+<li>支持类似富文本编辑的操作，将标题、加粗、倾斜、下划线、链接等功能做成按钮，降低新手的习惯迁移难度；</li>
+<li>Markdown 纯文本智能高亮，按照色相区分文章结构，以颜色的明暗区分标记和文本；</li>
+<li>Markdown 标记输入智能提示，比如成对标记自动补全，输入 <code>**</code> 自动补全为 <code>****</code>，并将光标定位到输入位置；</li>
+<li>Markdown 区域和预览区域同步滚动，避免两侧内容长度不同带来的定位麻烦；</li>
+<li>自动提取文中标题生成内容大纲，并支持单击定位；</li>
+<li>全文查找替换等绝大多数纯文本编辑特性……</li>
+</ul>
+<p>除了强大的辅助编辑功能以外，Markdown 编辑器广泛支持自定义样式，你可以粘贴自己的样式代码片段以覆盖编辑器的默认样式表，或者上传一份你自己的完整样式文件，编辑器会完全按照你的样式进行呈现。</p>
+<p>对于单纯的 Markdown 编辑器来说，以上这些支持都是建立在不对你的原始 <code>md</code> 文件做任何修改的前提下进行的，你的原始文件依然是纯净的，这也意味着，如果你将你的 Markdown 文件分享给其他人，他们看到的样式是基于他们自己的样式配置的。如果你想带着样式将内容发给别人，你可以试一下编辑器的导出选项，大多数编辑器都支持将 Markdown 导出为带样式的 Html 和不带样式的 Html、PDF、图片等……如果你有更多的导出需求，你可以通过一些简单的技术手段，实现 Markdown 和百余种主流文档格式的互转。</p>
+<blockquote>
+<ul>
+<li>内容与样式分离与导出为 Html 并不冲突，导出为 Html 导出的仍然是单独的一份文件，编辑器自动将外部样式表中相关的样式转换为内部样式表写入到 Html 中。</li>
+</ul>
+</blockquote>
+<p>也存在不单纯的 Markdown 编辑器，比如Boostnote、Ulysses，不过就本质来讲它们的定位是一款笔记软件而不是简单的文档编辑器，Markdown 只是它们全力支持、大力推崇的一种文档格式而已，使用这些软件并不意味着你手中没有 <code>md</code> 原文件，这些软件的导出选项中都支持导出 <code>md</code> 文件。</p>
+<p>越来越多的应用开始支持 Markdown，比如我们熟知的印象笔记，正在大力将对 Markdown 的支持整合到其产品中去，包括国内的一些笔记软件，为知笔记、有道云笔记……对于这些软件来说，Markdown 既可以提升用户的写作体验，又可以降低文档的管理成本，何乐而不为。</p>
+<blockquote>
+<ul>
+<li>
+<p>Markdown 全文均为纯文本，不同于过往的富文本，Markdown 中的多媒体内容比如图片、视频等，均以链接的形式插入，相同内容的Markdown 和 Docx 相比，Markdown 文件小的不是一星半点。同时也要注意，如果要在Markdown 中插入图片或视频，这些图片或视频一定要存储在一个稳定的，随时可访问的网络位置。</p>
+</li>
+<li>
+<p>其实富文本也是一种标记语法，只不过编辑器（Word之类）已经高度封装，你看不到任何标记的存在，这也是大多数文档格式只能用特定软件打开、阅读、编写的原因。相较之下，Markdown 只是一堆纯文本而已，只要你有文字处理软件就可以打开，并且其简单清晰的语法保证你打开就能阅读。</p>
+</li>
+</ul>
+</blockquote>
+<p>当前在线文档的发展也愈发火热，比如WPS、石墨文档、腾讯文档等，这些应用都或多或少引入了 Markdown 的特性进去，可以预测，对 Markdown 的支持也会只增不减。如果你对技术领域关注比较多的话，Markdown 已经是自建博客、Wiki系统、文档管理系统等的首选支持选项。</p>
+<p>Markdown 的发展现状、Markdown 本地编辑器、Markdown 在线编辑器、Markdown 文档管理生态都完全能够独立成章，这篇文章以介绍 Markdown 为主要目的，故点到为之，不做过多拓展。</p>
+<h2 id="使用-markdown-的-5-个理由">使用 Markdown 的 5 个理由</h2>
+<p>从 Markdown 的客观特性出发，结合我个人的使用感受，给出以下五点使用 Markdown 的理由：</p>
+<ul>
+<li><strong>结构化思维方式</strong>：Markdown 中最常用的两个标记莫过于<strong>标题</strong>和<strong>列表</strong>，由于它天然亲近结构化，使用者会不自觉养成一种结构化的思维方式，一篇文章通常从勾勒框架开始，而后填充细节，而后成文，井井有条，而这种结构化思维方式可以有效提升我们的生产力。</li>
+<li><strong>专注内容创作</strong>：Markdown 将复杂的样式选项提炼为简洁的文本标记，帮助使用者在写作过程中专注于文章内容而不是格式排版，因为我们可以在文章写作完成之后根据预先定义的样式一键导出精美的文档。</li>
+<li><strong>一次编辑，多端发布</strong>：得益于 Html + CSS 的内容样式分离方案，Markdown 天生支持一次编辑，多端发布，成文之后几乎不需要做任何调整就可以直接发布在支持 Markdown 的内容发布平台上，并且完美适配平台样式；对于尚未支持 Markdown 的主流发布平台，Markdown 生态中也有相应的转换工具可以方便地将 Markdown 转换为目标格式的内容。</li>
+<li><strong>完善的版本管理方案</strong>：Markdown 天生的纯文本特性，使它可以完美配合 Git 等版本控制工具实现任意粒度的版本管理以及团队协作，甚至使用 Diff。</li>
+<li><strong>无与伦比的扩展性</strong>：Markdown 可以支持代码段、甘特图、流程图、数据图表、在线视频、任意 Html ……并且这些功能完全支持自定义，几乎可以满足任何写作需求，背后广大的开发者群体更让这些扩展性发挥到极致。</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>C:/Users/cigaret/OneDrive/Storage/SoftwareAttachment/Gridea/output/post/hello-gridea/index.html</id>
+        <link href="C:/Users/cigaret/OneDrive/Storage/SoftwareAttachment/Gridea/output/post/hello-gridea/index.html">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="http://hvenotes.fehey.com/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<p><img src="C:/Users/cigaret/OneDrive/Storage/SoftwareAttachment/Gridea/output/post-images/1559463702988.png" alt=""></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>𝖶𝗂𝗇𝖽𝗈𝗐𝗌</strong> 或 <strong>𝖬𝖺𝖼𝖮𝖲</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
