@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kongxiangyan.github.io/Markdown</id>
     <title>Thoughts</title>
-    <updated>2019-06-06T13:32:43.344Z</updated>
+    <updated>2019-06-06T16:08:40.770Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kongxiangyan.github.io/Markdown"/>
     <link rel="self" href="https://kongxiangyan.github.io/Markdown/atom.xml"/>
@@ -10,6 +10,328 @@
     <logo>https://kongxiangyan.github.io/Markdown/images/avatar.png</logo>
     <icon>https://kongxiangyan.github.io/Markdown/favicon.ico</icon>
     <rights>All rights reserved 2019, Thoughts</rights>
+    <entry>
+        <title type="html"><![CDATA[基于 Markdown 搭建博客]]></title>
+        <id>https://kongxiangyan.github.io/Markdown/post/blog-base-on-markdown</id>
+        <link href="https://kongxiangyan.github.io/Markdown/post/blog-base-on-markdown">
+        </link>
+        <updated>2019-06-06T13:39:44.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="基于-markdown-搭建博客">基于 Markdown 搭建博客</h1>
+<p>博客是一种跟所有人分享你生活和思想的方式，大家都是成年人了，谁还不想要一扇向世界敞开的门呢🚪。在熟悉了 Markdown 的原理和基本语法之后，我们就可以基于 Markdown 搭建起一个属于自己的不受限的博客啦。</p>
+<p>搭建博客的方式有 N 种，但不外乎分为两大类，<strong>靠别人的</strong>和<strong>靠自己的</strong>，靠别人的大致有以下两种：</p>
+<ol>
+<li>在网络社区开设个人主页，比如新浪博客、CSDN、博客园等，广泛地说简书、知乎专栏、QQ空间、微信公众号等这类内容社区也算是博客的变体，不过相较而言前者的主页可定制程度要比后者要高得多。</li>
+<li>基于第三方平台搭建个人博客网站，典型的像 Google Blogger，Wordpress 。这一类平台会提供给你一个功能全面的后台，你可以拖拽式地用系统组件生成你的网站，然后发布文章、管理评论等，通过后台管理系统控制一切。</li>
+</ol>
+<blockquote>
+<p><strong>特别说明：</strong></p>
+<ul>
+<li>Google Blogger 需要科学上网，读者也需要科学上网，可以通过配置自定义域名解决。</li>
+<li>Wordpress 此类服务收费，按照站点用途和功能的完善性划分为 Blogger → Personal → Premium → Business → eCommerce 五个等级，费用从 $3 per monthly → $45 per monthly不等，按年度付费。</li>
+</ul>
+</blockquote>
+<p>靠自己的话方法花样比较多啦，毕竟开发者群体一般都比较能折腾，一般来说大家会采纳以下三种方案：</p>
+<ol>
+<li>基于 Markdown 使用 Jekyll、Hexo、Hugo 等<strong>静态站点生成器</strong>生成静态站点文件，而后将站点部署在自己的服务器上，或者使用免费的托管服务如 GItHub Pages 或 Coding Pages。这种方案的特点是站点生成器的社区中有丰富的主题和页面插件，可选项充足。支持自定义主题，Html 页面框架使用模板语法编写，需要一定的开发基础。部署也基于命令行，有一丢丢门槛。</li>
+<li>自行租赁服务器部署内容管理系统（CMS），使用成熟的开源系统像 Wordpress、Ghost、Drupal 等，这种方案支持完全自定义，想怎么搞怎么搞，前提是具备一定的开发基础。特点是功能全面，能够满足几乎一切文章管理的需求，对于一般需求的人来说有点大材小用，维护成本比较高，对我来说不讨喜的一点是我需要额外考虑如何管理我的 Markdown 原始文件。</li>
+<li>自己写代码撸一个系统出来（吃饱了撑的或是真的以此谋生），这种一般都半途而废了，毕竟开发者自己能想出来的千奇百怪的需求比产品经理要多 100 倍😂​​。</li>
+</ol>
+<blockquote>
+<p>像 Wordpress、Ghost 这样的开源系统，主要的收入来源就是提供托管服务并代为维护，插件生态的完善主要是自行部署的开发者们驱动。</p>
+</blockquote>
+<p>事实上还可以总结出来一类叫做“<strong>靠大家</strong>”的搭建方式，分别是使用 IPFS 和使用 Headless CMS，这两种方式还没有完全兴起，但着实让人向往。</p>
+<hr>
+<p>以上都是自说自话，对于大多数非技术向的朋友来说，我们的驱动力只是想把自己的写的东西给大家看到而已，没有必要对诸多实现进行深究。</p>
+<hr>
+<p>本文介绍一种搭建博客的方式，适合各种各样的人群，作为进入博客世界的敲门砖再好不过了。在这种方案下，认知背景不同的人能够做到不同程度的效果，当然，文章建立在你已经对 Markdown 的原理有所了解的基础上完成，如果你不了解 Markdown ，完全可以跳过相关的部分，如果你是高手，请一笑而过。</p>
+<p>开始阅读之前，先明确三件事情：</p>
+<ul>
+<li>希望你会使用 Markdown 进行写作，最好能够了解其原理，入门 Markdown 可以阅读另一篇文章《Markdown 为何物》；</li>
+<li>拥有一个 GItHub 账号，注册地址：<a href="https://GItHub.com/">GItHub</a>；</li>
+<li>下载静态博客写作客户端 Gridea，下载地址：<a href="https://gridea.dev/">Gridea</a>；</li>
+</ul>
+<h2 id="实现原理">实现原理</h2>
+<p>Markdown 可以方便地转换为 Html ，并且拥有无限的定制可能性，Html 页面之间相互链接就成为了网站，将网站发布在一个所有人都可访问的地方，博客就搭建起来啦。这是实现的基本逻辑，具体到每一个方面又各有其实现细节：</p>
+<h3 id="markdown-to-html">Markdown to Html</h3>
+<p>我们的出发点是手中的 Markdown 文章，我们希望它们最终可以让世界上的所有人看得到，最直接的方式便是通过互联网啦，Html 由于其出色的表现力自然就作为首选的发布格式，故我们搭建博客的基础便是 <code>Markdown → Html</code>，<code>Markdown</code> 解析器可以出色地完成这项任务，大多 Markdown 编辑器都内置了解析器，可以帮我们将 Markdown 文章转换为 Html 格式导出，但这还不够完美。我们可不愿意将每篇文章独立发布，这不叫 <code>一个博客</code> ，我们希望他们可以作为一个有机体，你中有我我中有你，互相连接。</p>
+<p>最简单的实现方式是做一个目录页，<code>一棵藤上七朵花</code>，我可以通过目录页跳转到每一篇单独文章，最好是单独的文章可以链回目录页。我们回想一下 Markdown 转换为 Html 的原理：</p>
+<pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;这是一个网页的大致结构&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./path/to/css.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  	&lt;!-- Markdown 转换之后的 Html 内容放在这里 --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>我们的 Markdown 转换之后是作为页面的一部分插入进去的，这意味着我们完全可以对它进行扩展：</p>
+<ul>
+<li>
+<p>首先是一个目录（table of contents）页：</p>
+<pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;这是一个目录页&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;a href=&quot;./path/to/table-of-contents.html&quot;&gt;&lt;/a&gt;
+  	&lt;a href=&quot;./path/to/passage-page-a.html&quot;&gt;&lt;/a&gt;
+    &lt;a href=&quot;./path/to/passage-page-b.html&quot;&gt;&lt;/a&gt;
+    &lt;!-- 更多文章的链接 --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</li>
+<li>
+<p>然后是文章页面（passage page）：</p>
+<pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;这是一个单独的文章页面&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./path/to/css.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;a href=&quot;./path/to/table-of-contents.html&quot;&gt;&lt;/a&gt;
+  	&lt;!-- Markdown 转换之后的 Html 内容放在这里 --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</li>
+</ul>
+<p>基于这样的逻辑，我们可以将任意多的文章联系到一起👍，并且，我们可以实现更多的花样，让这些页面之间的关系更加紧密，比如：</p>
+<ul>
+<li>对文章进行分类，分别建立目录页，然后建立目录页的目录页，在首页上设置指向它的链接，在每篇文章的页面上著名它所属的分类，并在文章页面上添加指向所属目录的目录页的链接，也就是：<strong>标签体系</strong>；</li>
+<li>单独建立一个目录页，按照时间顺序排列所有的文章，并提供对应的链接，让大家可以一目了然看到我的历史发布信息和更新频率，也就是：<strong>归档</strong>；</li>
+<li>看完每篇文章后回到目录页再进入其它文章似乎有点麻烦，我们完全可以在每篇文章的页面上加入其它文章的链接呀，按照时间顺序也好，按照分类也好；</li>
+<li>……</li>
+</ul>
+<p>毕竟网络就是互相链接嘛，但是我们不可能自己去手动做这些事情，太麻烦了，最好是有一个工具可以替我们完成。这样的工具当然是有的，并且还不少，静态博客的实现原理都是页面之间的互联，或者进一步说，整个互联网就是由一个一个的链接建立起来的，但互联网的机制远比我们以上所陈述的更加复杂庞大。</p>
+<p>大多数工具都是基于命令行操作的，配置和启动都需要一定的开发基础，Gridea 是个例外，它将其中的细节隐藏，留给我们简单的按钮，之后我们会对其进行详细介绍。</p>
+<h3 id="html-to-everyone">Html to Everyone</h3>
+<p>我们希望我们的内容可以让世界上的所有人都可以看到，所有人都可以触达的是什么呢，是互联网（Internet），那么互联网是什么？我们又如何将自己的文件放在互联网上呢？</p>
+<p>事实上，互联网是一种联系的总和，就像我们现实生活中的公路网，它连接的是各个区域和住户，互联网的住户，就是包括我们的电脑在内的一台台机器。但我们的个人电脑，其实是民用房，是我们温馨的小屋子，它不可以随时被访问，不然我们的生活就乱套了。想让大家随时都可以访问的话，最好还是另外开一个便利店，24 小时营业，然后把要分享给大家的内容放在便利店橱窗里。换句话说，我们需要有一台机器，它可以一直保持在线，不关机、不断网，随时接受客人的访问，满足这样条件的机器我们称之为 <code>服务器</code>。</p>
+<p>拥有机器还不够，我们得让大家可以找到它，为此，我们为每台连接到互联网的机器分配一个地址（<code>IP 地址</code>），它唯一且仅仅指向我们的服务器。在计算机的世界里，IP 地址是一串二进制数字，太长了，为了方便表示，一般将它转换为十进制，像这样：<code>127.0.0.1</code> ，即使是这样，也难以弥补数字天生不符合我们大多数人的记忆习惯的特点（我也不知道这句话有什么依据，我只知道数字真滴难记），但最终这个地址是要跟人打交道的，所以我们建立了一个叫做域名系统的东西（Domain Name System，DNS），它是一个地址管理员，允许我们为 IP 地址指定别名（<code>域名</code>）。我们需要将 IP 地址和为它指定的域名告诉地址管理员，管理员会将二者的对应关系记录在自己的小本本上，这样，我们就可以像逛商场一样通过店名来寻找意中的商品啦，而不是傻傻地对着地址寻找店子。寻址工作会由计算机完成，浏览器拿着域名去找地址管理员，管理员会查找自己的小本本，将对应的地址告诉浏览器，然后浏览器通过地址与目标机器取得联系。</p>
+<p>管理员查找小本本的过程叫做 <code>DNS 解析</code>，这个过程其实有很多学问，管理员也不是傻子，不可能直接从数以亿记的条目中寻找你想要的那一条，这是一个庞大的工程，为了高效完成任务，它会在存储条目的时候运用一些技巧，并且它拥有自己的员工，也会进行合理的任务分配，诸多技巧的运用使得它能够胜任这份工作。</p>
+<blockquote>
+<ul>
+<li>IP 地址是一个 32 位的二进制数，通常被分割为 4 个“ 8 位二进制数”（也就是 4 个字节）。IP 地址通常用“点分十进制”表示成（a.b.c.d）的形式，其中，a,b,c,d 都是 0 ~ 255 之间的十进制整数。例：点分十进制 IP 地址（100.4.5.6），实际上是 32 位二进制数（01100100.00000100.00000101.00000110）。</li>
+<li>域名和 IP 是多对一的关系，一台服务器对应着一个唯一的 IP ，但你可以将多个不同的域名指向到同一个 IP。</li>
+</ul>
+</blockquote>
+<p>我们网上冲浪的载具是浏览器，浏览器的功能远比我们想象中的强大，它实际上是 <code>“文件资源浏览器”</code> ，区别于电脑上的 <code>文件资源管理器</code>，浏览器本身的管理功能很弱，它主要的特长在于浏览，既可以浏览本地文件，也可以足不出户，将互联网上的内容带到我们面前。</p>
+<blockquote>
+<p>浏览器可以浏览本地文件，试试将本地某个文件夹的路径贴到浏览器的地址栏中，Windows 系统中按 <kbd>Windows + E</kbd> 可以呼出文件资源管理器。</p>
+</blockquote>
+<p>在互联网上进行信息资源的访问可不是随心所欲的，为了让大家的交流井井有条，我们制定了多套协议，分别用于管控浏览器和服务器的互相交流。大家日常访问网页资源所对应的协议是 <code>HTTP</code>（Hyper Text Transfer Protocol，<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP">超文本传输协议</a>），这套协议规定了浏览器和服务器（店家）沟通和交流的方式。</p>
+<blockquote>
+<p>Html，全称为 HyperText Markup Language，它是一种标记语言，用于组织**<a href="https://baike.baidu.com/item/%E8%B6%85%E6%96%87%E6%9C%AC">超文本</a>**，超文本意即通过文本链接组织信息和资源。</p>
+</blockquote>
+<p>总的来说，我们需要有一个服务器用来放置我们的网页资源，最好能够有一个域名便于大家记忆。要知道资源都是 Money，要拥有这些资源需要的成本也不小。好在互联网对我们这些小乞丐还是比较仁义的，总有一些大的商城极为慷慨，可以为我们提供落脚点。我们可以将网站资源放到他们的空间里，也算有个门面，供客人进行访问。当然，商家也不是傻子，互联网小乞丐众多，为他们提供落脚点，小乞丐的客人也就是商家的客人啦┑(￣Д ￣)┍。</p>
+<p><a href="https://GItHub.com/">GItHub</a> 就是这样一个平台，它为开发者们提供代码和软件的托管服务，这是一个非常美妙的地方，你可以看到一群单纯地通过一个个字符让世界变得更美好的人。我们就选择在这里驻足啦。</p>
+<h3 id="local-to-server">Local to Server</h3>
+<p>将由 Markdown 转换成的网站文件从本地转移到服务器的过程中，也有一些细节值得注意，考虑如下情况，我们本地有一组文件，它们在 <code>MarkdownTutorial</code> 文件夹下，文件结构如下：</p>
+<pre><code>| - MarkdownTutorail
+	| - Assets ··· 放置图片等资源文件
+	| - js ··· 放置 Javascript 脚本文件
+	| - css ··· 放置 CSS 外部样式表文件
+	| - Article ··· 放置单独文章的 Html 文件
+		| - MarkdownToHtml.html
+		| - ……
+	| - index.html ··· 博客网站首页 Html 文件 
+</code></pre>
+<p>对于其中的 <code>MarkdownToHtml.html</code> 文件来说，它的完整路径如下：</p>
+<pre><code>C:/Users/cigaret/OneDrive/Drafts/MarkdownTutorial/Article/MarkdownToHtml.html
+</code></pre>
+<p>而将这组文件（整个 <code>MarkdownTutorial</code> 文件夹）转移到服务器之后，我们访问它的地址将形如：</p>
+<pre><code>https://thoughts.vip/Article/MarkdownToHtml.html
+</code></pre>
+<p>两个问题：</p>
+<ul>
+<li>我之前写在写在其它 Html 文件中的其它页面的链接还有效吗？</li>
+<li><code>https://thoughts.vip/</code> 相当于 <code>C:/Users/cigaret/OneDrive/Drafts/MarkdownTutorial/</code> 吗？</li>
+</ul>
+<h4 id="相对路径与绝对路径">相对路径与绝对路径</h4>
+<p>对于第一个问题，如果我们在 <code>MarkdownToHtml</code> 页面中指向首页的链接的时候写的是其完整路径：</p>
+<pre><code class="language-html">&lt;a href=&quot;C:/Users/cigaret/OneDrive/Drafts/MarkdownTutorial/index.html&quot;&gt;&lt;/a&gt;
+</code></pre>
+<p>那么，一旦我们的网站文件夹发生了移动，这个链接便不再有效了，也就是说，它始终指向这个位置的这个文件，一旦这个文件不在了，链接便失效了。为了解决这个问题，我们引入 <code>相对路径</code> 的概念，大概意思就是，我们站点文件夹的位置会发生转移，但是站点文件夹内的文件目录结构一般不会发生变化，只要通过文件之间的相对位置定义链接就可以解决站点文件夹移动后链接失效的问题啦。于是，参考以上目录结构，以上链接实际上会写成：</p>
+<pre><code class="language-html">&lt;a href=&quot;../index.html&quot;&gt;&lt;/a&gt;
+</code></pre>
+<p>相对路径的定位基于当前文件， <code>../index.html</code> 的意思是 <code>当前这个文件的上一级目录下的 index.html</code> 文件。</p>
+<p>这样，当我们将 <code>MarkdownTutorial</code> 上传到服务器上时，只要其目录结构没有发生变化，网站之间的链接便完全有效。</p>
+<blockquote>
+<p>与相对路径相对，文件的完整路径一般成为<strong>绝对路径</strong>。</p>
+</blockquote>
+<h4 id="url">URL</h4>
+<p>理解第二个问题需要稍微熟悉一下浏览器访问互联网资源的方式，以下是一个一般的 URL（Uniform Resource Locator，统一资源定位符），</p>
+<pre><code>https://thoughts.vip/Article/MarkdownToHtml.html
+</code></pre>
+<p>顾名思义，URL 用于定位互联网上可获取的资源的位置。以这个 URL 为例，从前往后它大致分为三个部分：</p>
+<ul>
+<li>首先是 <code>https://</code> ，称作协议，用于规范浏览器和服务器进行信息交流和传输的方式；</li>
+<li><code>thoughts.vip</code> 是域名，它会被解析为 IP 地址，浏览器通过 IP 地址找到对应的服务器。事实上域名后面紧跟着一部分叫做端口的东西，它的完整形式是 <code>thoughts.vip:80</code> ， 后面的 <code>80</code> 即为端口号。如果把服务器比作一个房子的话，每个端口就是房子的一个门，默认情况下服务器从 80 号门接待客人，为了方便也就可以省略不写啦，但如果是其它端口则一般需要明确表示。浏览器找到服务器之后，通过对应的端口进行交流。</li>
+<li><code>/Article/MarkdownToHtml.html</code> ，第三部分叫做路径，服务器可不希望访客可以在自己的地盘随心所欲，所以，主人会指定一个客人可访问的资源的范围，通常是一个目录（文件夹），然后在对应的目录下按照访问者传达的路径来检索资源并返回。</li>
+</ul>
+<blockquote>
+<ul>
+<li>服务器拥有访问的绝对控制权，它可以根据你叫它的别名、你想要请求的资源、你遵循的协议、你想要访问的端口以及你所携带的其它额外信息分析你的角色，并基于这些判断决定你可以访问的东西以及要返回给你的东西。</li>
+<li>早年服务器上资源量小的时候，路径一般都直接指向一个特定的文件，但随着资源量的增加和服务器管理能力的发展，很多路径已经不指向特定的文件啦，大家转而使用 <code>抽象路径</code> 。不同于一般路径指向的是具体的文件或文件夹，抽象路径指向内容本身，而无关内容身处何处，程序会根据抽象路径去搜寻或拼接内容，并将结果返回给访客。</li>
+</ul>
+</blockquote>
+<p>所以 <code>https://thoughts.vip/</code> 并不相当于 <code>C:/Users/cigaret/OneDrive/Drafts/MarkdownTutorial/</code> ，它们之间几乎没有关系，虽然。</p>
+<p>所以，<code>https://thoughts.vip/</code> 并不等同于 <code>C:/Users/cigaret/OneDrive/Drafts/MarkdownTutorial/</code>，前者是完成访问所需的信息的一部分，目标文件的具体存储位置是由服务器决定的，并不体现在 URL 中。</p>
+<p>熟悉了基本的实现原理之后，你会对搭建的过程有更直观的理解和把握，具体到操作很简单！马上开始吧！！</p>
+<h2 id="着手搭建">着手搭建</h2>
+<h3 id="gridea">Gridea</h3>
+<p><img src="https://oss.thoughts.vip/image/note/20190606150731-grideaface.png" alt="Gridea 软件界面"></p>
+<p>Gridea 是一款基于 Markdown 的静态博客写作客户端，它源码开源在 GitHub 上，作者是 EryouHao。</p>
+<ul>
+<li>📕项目仓库：<a href="https://github.com/getgridea/gridea">https://github.com/getgridea/gridea</a></li>
+<li>💻软件官网：<a href="https://gridea.dev/">https://gridea.dev/</a>​</li>
+</ul>
+<p>它的本质是一个基于 Markdown 的静态网站生成器，可以帮我们组织文章之间的关系。支持以下功能：</p>
+<ul>
+<li>使用 Markdown 编辑文章，并可以插入文章的摘要、可以配置头图、可以自定义文章的 URL 路径；</li>
+<li>按照标签和时间线管理文章，可以将文章发布为单独的菜单项；</li>
+<li>多网站主题可选，可基于模板自定义开发；</li>
+<li>可以进行站点信息的自定义，包括站点名称、图标、头像、站点描述、版权信息；</li>
+<li>可以插入其它社交平台的链接，包括：GitHub、Twitter、微博、知乎、Facebook；</li>
+<li>可以为网站添加 Google 站点统计；</li>
+<li>可以单独调整页面内容区布局、正文文字大小以及网页背景色、内容区背景色、文字、链接等元素的颜色；</li>
+<li>可以生成 RSS / Feed；</li>
+<li>可以一键同步到 GitHub 或 Coding 完成线上内容的更新；</li>
+<li>可以配置用户评论系统；</li>
+<li>可以指定网站目标文件夹（基于此特性结合同步工具可实现多设备无缝编辑）；</li>
+<li>客户端适配中英文两种版本；</li>
+<li>……</li>
+</ul>
+<p>把当前的功能罗列了一遍，功能的表述也很明确，大家可以下载后自己琢磨，需要注意的是，Gridea 的编辑能力并不强，推荐使用诸如 Typora 等其它 Markdown 编辑器进行主要编辑，编辑完成后使用 Gridea 进行文章的管理和发布。</p>
+<h3 id="github">GitHub</h3>
+<p>Gridea 安装完成之后会带有默认的介绍文章，此时你已经完全可以通过它来管理你的 Markdown 文章并将他们组织成博客站点了，点击左下角的 <kbd>Preview</kbd> 按钮即可本地预览当前站点。</p>
+<blockquote>
+<p>Gridea 将在你做出任何配置更改之后重新自动生成静态站点。</p>
+</blockquote>
+<p>GitHub 为广大开发者提供代码或软件的托管服务，并且可以为每一个仓库开启 <code>GitHub Pages</code> 选项，该选项开启之后，GitHub 会将你的仓库作为网站发布，并为其分配域名，你也可以为其指定自己的域名。</p>
+<h4 id="创建一个新的仓库">创建一个新的仓库</h4>
+<p><img src="https://oss.thoughts.vip/image/note/20190606152643-create_new_repo.png" alt="创建一个新的仓库"></p>
+<p>快捷链接：<a href="https://github.com/new">https://github.com/new</a>，以上设置项自上而下分别为：</p>
+<ul>
+<li>Repository name：</li>
+<li>Description：</li>
+<li>Public \ Private：</li>
+<li>勾选 <code>Initialize this repository with a README</code></li>
+</ul>
+<h4 id="开启-github-pages-服务">开启 GitHub Pages 服务</h4>
+<p><img src="https://oss.thoughts.vip/image/note/20190606153124-repo_settings.png" alt="仓库 Settings界面"></p>
+<p>滚动页面，找到 <code>GitHub Pages</code> 配置区域，如下：</p>
+<p><img src="https://oss.thoughts.vip/image/note/20190606153409-github_pages_setting.png" alt="GitHub Pages 设置"></p>
+<p>选择 <code>master branch</code>，等待页面刷新：</p>
+<p><img src="https://oss.thoughts.vip/image/note/20190606154505-github_pages_setting.png" alt="GitHub Pages 配置结果"></p>
+<p>系统会显示你的站点的发布地址，上图显示我的站点发布在：<code>https://kongxiangyan.github.io/Markdown/</code>，我也可以在下面 <code>Custom domain</code> 字段自定义我的网站 URL 地址。</p>
+<h4 id="下载安装-git">下载安装 Git</h4>
+<p>GitHub 基于 Git 做文件管理和版本控制，要将文件上传至 GitHub ，我们需要在本地下载好 Git。</p>
+<p>Git 官方网站：<a href="https://git-scm.com/">https://git-scm.com/</a></p>
+<p>下载完成之后一路默认安装即可，安装完成之后，打开命令行工具（Windows 用户按 <kbd>Windows + R</kbd> ，输入 <code>cmd</code> ，然后 <kbd>Enter</kbd> 即可），在命令行中输入 <code>git --version</code> ，如果输出 Git 的版本信息，即表示安装成功。</p>
+<h4 id="生成令牌">生成令牌</h4>
+<p>为了让 GitHub 能够识别 Gridea 的身份，允许它上传网站文件，我们需要为 Gridea 生成一个令牌（Token），打开 GitHub 的个人设置页面，依次点击 <code>Developer settings</code> &gt; <code>Personal access tokens</code>，进入如下界面：</p>
+<p><img src="https://oss.thoughts.vip/image/note/20190606155856-github_token_setting.png" alt="GitHub Token Setting"></p>
+<p>点击 <code>Generate new token</code> ，GitHub 验明你正身之后，进入到 Token 的配置页面：</p>
+<p><img src="https://oss.thoughts.vip/image/note/20190606160133-github_token_setting.png" alt="GitHub Token Setting"></p>
+<p>在 <code>Note</code> 一栏简单输入这个 Token 的用途，<strong>权限只勾选第一项</strong> <code>repo</code> ，然后滚动到页面底部，点击生成：</p>
+<p><img src="https://oss.thoughts.vip/image/note/20190606160422-github_token_for_gridea.png" alt="GitHub Token for Gridea"></p>
+<p>记录好这串字符，因为它只显示当前一次，之后你就再也见不到它了，如果丢失，需要重新生成。</p>
+<h4 id="配置-gridea">配置 Gridea</h4>
+<p>以上我们已经具备了所有先行条件，可以进行 Gridea 的上传配置啦，打开 Gridea 客户端，依次进入：<code>Settings</code> &gt; <code>Basic Settings</code> （或者 <code>配置</code> &gt; <code>基础配置</code>），选中 <code>GitHub Pages</code>，然后填写下面的内容：</p>
+<ul>
+<li>Domain： 填写网站的地址，即 Github Pages 配置成功的地址；</li>
+<li>Repository： 填写仓库名称；</li>
+<li>Branch： 填写仓库分支，目前是 <code>master</code>；</li>
+<li>Branch Username： 填写仓库用户名，即你的用户名；</li>
+<li>Email： 填写自己的邮箱；</li>
+<li>Token：填写我们为 Gridea 生成的 Token；</li>
+<li>CNAME：用于填写 GitHub Pages 的自定义域名，可以为空；</li>
+</ul>
+<p>填写完毕之后，保存并点击 <code>Test Conection</code> （测试连接），待 Gridea 界面上方提示 <code>√ Remote connection succeeded</code> ，即配置成功。</p>
+<p><img src="https://oss.thoughts.vip/image/note/20190606161828-gridea_remote_connection_succed.png" alt="Remote connection succeeded"></p>
+<h4 id="一键上传网站文件">一键上传网站文件</h4>
+<p>现在，我们可以通过点击 Gridea 左下角的 <code>Sync Website</code> 或 <code>同步</code> 来将本地文件上传到仓库中了，至此我们的博客便配置上线啦，访问 GitHub Pages 链接试试吧。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Special Symbol]]></title>
+        <id>https://kongxiangyan.github.io/Markdown/post/special-symbol</id>
+        <link href="https://kongxiangyan.github.io/Markdown/post/special-symbol">
+        </link>
+        <updated>2019-06-06T13:39:23.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="special-symbol">Special Symbol</h1>
+<h3 id="hotkeys">Hotkeys</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Option</td>
+<td>⌥</td>
+</tr>
+<tr>
+<td>Control</td>
+<td>⌃</td>
+</tr>
+<tr>
+<td>Command</td>
+<td>⌘</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>⇧</td>
+</tr>
+<tr>
+<td>Caps Lock</td>
+<td>⇪</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>⇥</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>⎋</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>⌽</td>
+</tr>
+<tr>
+<td>Return</td>
+<td>↩</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>⌫</td>
+</tr>
+<tr>
+<td>Up</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>Down</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>Left</td>
+<td>←</td>
+</tr>
+<tr>
+<td>Right</td>
+<td>→</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Markdown Cheatsheet]]></title>
         <id>https://kongxiangyan.github.io/Markdown/post/markdown-cheatsheet</id>
@@ -95,8 +417,8 @@
 </ol>
 <h3 id="任务列表">任务列表</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1629077"><label class="task-list-item-label" for="task-item-1629077"> 未完成的任务项</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6235454"><label class="task-list-item-label" for="task-item-6235454"> 已完成的任务项</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3189174"><label class="task-list-item-label" for="task-item-3189174"> 未完成的任务项</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5990885"><label class="task-list-item-label" for="task-item-5990885"> 已完成的任务项</label></li>
 </ul>
 <pre><code>- [ ] 未完成的任务项
 - [x] 已完成的任务项
@@ -296,7 +618,7 @@ color: red;
 <blockquote>
 <ul>
 <li>基于以上网页的大致结构，我们还可以在页面上添加其它元素，例如导航栏、文章目录栏……回想一下网上的各种博客！！是的，完全可以基于 Markdown 搭建个人博客，网上已经有 N 种搭建方案供你选择。</li>
-<li>事实上，页面结构、页面样式、内容样式、文章内容，是多对多对多对多的关系，用 Markdown 写的文章具有无限可能性。</li>
+<li>事实上，页面结构、页面样式、内容样式、文章内容，是多对多对多对多的关系，还可以引入 Javascript 创建交互，用 Markdown 写的文章具有无限可能性。</li>
 <li>上文中介绍的 GFM 除了一套标记规范外，还包括一份样式文件。</li>
 </ul>
 </blockquote>
@@ -341,38 +663,6 @@ color: red;
 <li><strong>完善的版本管理方案</strong>：Markdown 天生的纯文本特性，使它可以完美配合 Git 等版本控制工具实现任意粒度的版本管理以及团队协作，甚至使用 Diff。</li>
 <li><strong>无与伦比的扩展性</strong>：Markdown 可以支持代码段、甘特图、流程图、数据图表、在线视频、任意 Html ……并且这些功能完全支持自定义，几乎可以满足任何写作需求，背后广大的开发者群体更让这些扩展性发挥到极致。</li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://kongxiangyan.github.io/Markdown/post/hello-gridea</id>
-        <link href="https://kongxiangyan.github.io/Markdown/post/hello-gridea">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="http://hvenotes.fehey.com/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>𝖶𝗂𝗇𝖽𝗈𝗐𝗌</strong> 或 <strong>𝖬𝖺𝖼𝖮𝖲</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>
