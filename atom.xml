@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kongxiangyan.github.io/Markdown</id>
     <title>Thoughts</title>
-    <updated>2019-06-06T13:15:14.168Z</updated>
+    <updated>2019-06-06T13:32:43.344Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kongxiangyan.github.io/Markdown"/>
     <link rel="self" href="https://kongxiangyan.github.io/Markdown/atom.xml"/>
@@ -95,8 +95,8 @@
 </ol>
 <h3 id="任务列表">任务列表</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5541724"><label class="task-list-item-label" for="task-item-5541724"> 未完成的任务项</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6019303"><label class="task-list-item-label" for="task-item-6019303"> 已完成的任务项</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1629077"><label class="task-list-item-label" for="task-item-1629077"> 未完成的任务项</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6235454"><label class="task-list-item-label" for="task-item-6235454"> 已完成的任务项</label></li>
 </ul>
 <pre><code>- [ ] 未完成的任务项
 - [x] 已完成的任务项
@@ -167,7 +167,7 @@ Content Cell  | Content Cell  | Content Cell
 <pre><code class="language-markdown">---
 </code></pre>
 <h2 id="图片">图片</h2>
-<p><img src="https://oss.thoughts.vip/image/note/20190602160952.png%22%E7%BA%B3%E7%B1%B3%E6%AF%94%E4%BA%9A%E7%9A%84%E5%B0%8F%E5%B1%8B%22" alt="纳米比亚的小屋"></p>
+<p><img src="https://oss.thoughts.vip/image/note/20190602160952.png" alt="纳米比亚的小屋" title="纳米比亚的小屋"></p>
 <pre><code class="language-markdown">![图片的占位文本，图片加载失败的时候显示](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg &quot;可选的图片标题，鼠标悬浮的时候显示&quot;)
 </code></pre>
 <h2 id="折叠文本">折叠文本</h2>
@@ -208,10 +208,6 @@ Content Cell  | Content Cell  | Content Cell
 </blockquote>
 <p><code>mark down</code>，顾名思义，跟写作有关。事实上，它为我们提供了一种<strong>轻量的写作方案</strong>，有效提升我们的写作体验的同时亦能大幅优化写作生态。👍</p>
 <p>许多不明就里的人会将 Markdown 视为一种编辑器，就像记事本和 Word 一样，这种认识并不准确。<code>Markdown</code>  和 <code>Markdown编辑器</code> 是两个完全不同的概念，前者的本质的是一种 <code>标记语法</code>，后者是为这种标记语法提供特殊支持的编辑器。</p>
-<details>
-           <summary>Title 1</summary>
-           <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-         </details>
 <h2 id="标记语法">标记语法</h2>
 <p>Markdown 文本长这个样子：</p>
 <pre><code class="language-markdown"># Markdown 为何物
