@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kongxiangyan.github.io/Markdown</id>
     <title>Thoughts</title>
-    <updated>2019-06-08T03:01:27.920Z</updated>
+    <updated>2019-06-08T03:12:40.162Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kongxiangyan.github.io/Markdown"/>
     <link rel="self" href="https://kongxiangyan.github.io/Markdown/atom.xml"/>
@@ -20,7 +20,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>博客是一种跟所有人分享你生活和思想的方式，大家都是成年人了，谁还不想要一扇向世界敞开的门呢🚪。在熟悉了 Markdown 的原理和基本语法之后，我们就可以基于 Markdown 搭建起一个属于自己的不受限的博客啦。这篇文章为你梳理静态博客网站的搭建原理以及如何用 Gridea 搭建起个人博客的雏形。</p>
 <!-- more -->
-<p>博客是一种跟所有人分享你生活和思想的方式，大家都是成年人了，谁还不想要一扇向世界敞开的门呢🚪。在熟悉了 Markdown 的原理和基本语法之后，我们就可以基于 Markdown 搭建起一个属于自己的不受限的博客啦。</p>
 <p>搭建博客的方式有 N 种，但不外乎分为两大类，<strong>靠别人的</strong>和<strong>靠自己的</strong>，靠别人的大致有以下两种：</p>
 <ol>
 <li>在网络社区开设个人主页，比如新浪博客、CSDN、博客园等，广泛地说简书、知乎专栏、QQ空间、微信公众号等这类内容社区也算是博客的变体，不过相较而言前者的主页可定制程度要比后者要高得多。</li>
@@ -425,8 +424,8 @@
 </ol>
 <h3 id="任务列表">任务列表</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3080625"><label class="task-list-item-label" for="task-item-3080625"> 未完成的任务项</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4691739"><label class="task-list-item-label" for="task-item-4691739"> 已完成的任务项</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3405933"><label class="task-list-item-label" for="task-item-3405933"> 未完成的任务项</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7732758"><label class="task-list-item-label" for="task-item-7732758"> 已完成的任务项</label></li>
 </ul>
 <pre><code>- [ ] 未完成的任务项
 - [x] 已完成的任务项
@@ -532,14 +531,16 @@ Content Cell  | Content Cell  | Content Cell
         <link href="https://kongxiangyan.github.io/Markdown/post/what-is-markdown">
         </link>
         <updated>2019-06-01T13:06:38.000Z</updated>
-        <summary type="html"><![CDATA[<p><code>mark down</code>，顾名思义，跟写作有关。事实上，它为我们提供了一种<strong>轻量的写作方案</strong>，有效提升我们的写作体验的同时亦能大幅优化写作生态。👍我强烈推荐你上手使用 Markdown，就像我将强烈推荐你 Build 自己的 IPFS。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p><code>mark down</code>，顾名思义，跟写作有关。事实上，它为我们提供了一种<strong>轻量的写作方案</strong>，有效提升我们的写作体验的同时亦能大幅优化写作生态。👍我强烈推荐你上手使用 Markdown，就像我将强烈推荐你 Build 自己的 IPFS。</p>
-<!-- more -->
-<blockquote>
+        <summary type="html"><![CDATA[<blockquote>
 <p>工具即思维。</p>
 </blockquote>
-<p><code>mark down</code>，顾名思义，跟写作有关。事实上，它为我们提供了一种<strong>轻量的写作方案</strong>，有效提升我们的写作体验的同时亦能大幅优化写作生态。👍</p>
+<p><code>mark down</code>，顾名思义，跟写作有关。事实上，它为我们提供了一种<strong>轻量的写作方案</strong>，有效提升我们的写作体验的同时亦能大幅优化写作生态。👍我强烈推荐你上手使用 Markdown，就像我将强烈推荐你 Build 自己的 IPFS。</p>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>工具即思维。</p>
+</blockquote>
+<p><code>mark down</code>，顾名思义，跟写作有关。事实上，它为我们提供了一种<strong>轻量的写作方案</strong>，有效提升我们的写作体验的同时亦能大幅优化写作生态。👍我强烈推荐你上手使用 Markdown，就像我将强烈推荐你 Build 自己的 IPFS。</p>
+<!-- more -->
 <p>许多不明就里的人会将 Markdown 视为一种编辑器，就像记事本和 Word 一样，这种认识并不准确。<code>Markdown</code>  和 <code>Markdown编辑器</code> 是两个完全不同的概念，前者的本质的是一种 <code>标记语法</code>，后者是为这种标记语法提供特殊支持的编辑器。</p>
 <h2 id="标记语法">标记语法</h2>
 <p>Markdown 文本长这个样子：</p>
