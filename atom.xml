@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kongxiangyan.github.io/Markdown</id>
     <title>Thoughts | Markdown</title>
-    <updated>2019-06-08T12:13:09.296Z</updated>
+    <updated>2019-06-17T06:14:27.359Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kongxiangyan.github.io/Markdown"/>
     <link rel="self" href="https://kongxiangyan.github.io/Markdown/atom.xml"/>
@@ -314,6 +314,10 @@
 <td>↩</td>
 </tr>
 <tr>
+<td>Enter</td>
+<td>⌅</td>
+</tr>
+<tr>
 <td>Delete</td>
 <td>⌫</td>
 </tr>
@@ -332,6 +336,76 @@
 <tr>
 <td>Right</td>
 <td>→</td>
+</tr>
+</tbody>
+</table>
+<h2 id="latin-拉丁文">Latin (拉丁文)</h2>
+<blockquote>
+<p>参考资料：<a href="https://zh.wikipedia.org/wiki/%C3%96">维基百科</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>大写</th>
+<th>小写</th>
+<th>替代</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ä</td>
+<td>ä</td>
+<td></td>
+</tr>
+<tr>
+<td>Ë</td>
+<td>ë</td>
+<td></td>
+</tr>
+<tr>
+<td>Ḧ</td>
+<td>ḧ</td>
+<td></td>
+</tr>
+<tr>
+<td>Ï</td>
+<td>ï</td>
+<td></td>
+</tr>
+<tr>
+<td>N̈</td>
+<td>n̈</td>
+<td></td>
+</tr>
+<tr>
+<td>Ö</td>
+<td>ö</td>
+<td>oe</td>
+</tr>
+<tr>
+<td>T̈</td>
+<td>ẗ</td>
+<td></td>
+</tr>
+<tr>
+<td>Ü</td>
+<td>ü</td>
+<td></td>
+</tr>
+<tr>
+<td>Ẅ</td>
+<td>ẅ</td>
+<td></td>
+</tr>
+<tr>
+<td>Ẍ</td>
+<td>ẍ</td>
+<td></td>
+</tr>
+<tr>
+<td>Ÿ</td>
+<td>ÿ</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -424,8 +498,8 @@
 </ol>
 <h3 id="任务列表">任务列表</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1377433"><label class="task-list-item-label" for="task-item-1377433"> 未完成的任务项</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1364350"><label class="task-list-item-label" for="task-item-1364350"> 已完成的任务项</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7705927"><label class="task-list-item-label" for="task-item-7705927"> 未完成的任务项</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2830829"><label class="task-list-item-label" for="task-item-2830829"> 已完成的任务项</label></li>
 </ul>
 <pre><code>- [ ] 未完成的任务项
 - [x] 已完成的任务项
